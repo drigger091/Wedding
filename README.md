@@ -12,17 +12,17 @@ An interactive, self-contained HTML wedding invitation crafted for **Puja Deb & 
 - **Typography**: Royal serif titles (`Cinzel` / `Playfair Display`), elegant calligraphy (`Great Vibes`), warm serif body (`Cormorant Garamond` / `Georgia`).
 - **Traditional Motifs**: Bengali auspicious invocations (`॥ শ্রী শ্রী প্রজাপতয়ে নমঃ ॥`, `॥ শুভ বিবাহ ॥`), intricate Paisley / Kalka floral vector elements, and gold filigree corners.
 - **Unveiling Flow**:
-  1. Grand lakeside wedding mandap scene with organic sinusoidal floating golden fireflies, clear panoramic views of the water, Victoria Memorial dome, and auspicious red-gold "শুভ বিবাহ" in the sky.
+  1. **Animated Bride & Groom Grand Entrance**: On page load, the animated bride (in traditional red Benarasi saree & mukut) and groom (in white kurta, dhoti & topor) walk gracefully along the floral walkway towards the center, turn forward, and bring their hands together into a traditional Bengali **Namaskar / Folded-Hand Greeting (`🙏`)**, freezing in this welcoming pose to greet the guest.
   2. Floating regal gold **Royal Shehnai** music controller at the top right with an animated 4-bar sound equalizer.
   3. Elegant, glowing **OPEN INVITATION** gold button at the bottom of the screen with a gentle breathing pulse.
   4. Tapping **OPEN INVITATION** initiates a **Gentle Cinematic Fade & Particle Drift**:
-     - The background scenery gains a dreamy **cinematic depth-of-field soft blur** and warm golden backlight aura.
+     - The background scenery with the welcoming couple gains a dreamy **cinematic depth-of-field soft blur** and warm golden backlight aura.
      - A radiant **Golden Sparkle Wash** (cascading golden stars, glowing embers, and champagne dust) showers downwards across the screen.
      - The **Royal Golden Scroll (রাজকীয় ফরম্মান)** smoothly unrolls downwards with soft optical blur-to-sharp crossfade, accompanied by swaying golden silk tassels.
      - Auspicious **Royal Shehnai Instrumental Melody** (Raga Kedar Dhun by Ustad Bismillah Khan) automatically fades in smoothly, setting an enchanting celebratory ambiance.
   5. At the top of the unrolled parchment is an ornate, sacred circular medallion of **Lord Ganesha (শ্রী গণেশ)** with `॥ ॐ শ্রী গণেশায় নমঃ ॥` and `॥ শুভ বিবাহ ॥`.
   6. Interactive buttons on the scroll allow guests to RSVP instantly on WhatsApp (`9874839969`), view the Google Maps venue location in a new tab, and save the wedding date directly to their calendar (.ics).
-  7. Smooth **Roll Up** navigation gently restores background focus and brings back the opening invitation button, while music continues or can be paused at will.
+  7. Smooth **Roll Up** navigation gently restores background focus and brings back the opening invitation button with the welcoming couple still in their folded-hand greeting, while music continues or can be paused at will.
 
 ---
 
@@ -39,11 +39,14 @@ Wedding_card/
 │   ├── traditional_bengali.aac            # Bengali folk wedding melody
 │   └── shubho_bibaho.aac                  # Shubho Bibaho instrumental track
 └── Images/
+    ├── couple_entrance.mp4                # Bride & groom walking & handfold animation (H.264)
+    ├── couple_greeting.jpg                # High-res poster of folded-hand Namaskar greeting pose
     ├── ganesh_emblem.jpg                  # Original high-res sacred Lord Ganesha artwork
     ├── ganesh_emblem_opt.jpg              # Optimized Ganesha scroll header emblem
     ├── ganesh_emblem.webp                 # Ganesha WebP asset
     ├── wedding_mandap_bg_wide.jpg         # Full 16:9 widescreen panoramic landscape mandap scenery asset
-    ├── wedding_mandap_bg.webp             # Optimized widescreen WebP image
+    ├── wedding_mandap_bg_wide_opt.jpg     # Optimized widescreen landscape scenery asset
+    ├── wedding_mandap_bg_opt.jpg          # Native 9:16 mobile portrait mandap scenery asset
     ├── wedding_mandap_bg.jpg              # Original portrait mandap scenery asset
     └── Venue_image.png                    # Venue photo reference
 ```
