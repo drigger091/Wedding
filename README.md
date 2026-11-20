@@ -14,9 +14,8 @@ An interactive, self-contained HTML wedding invitation crafted for **Puja Deb & 
 - **Unveiling Flow**:
   1. Grand lakeside wedding mandap scene with organic sinusoidal floating golden fireflies, clear panoramic views of the water, Victoria Memorial dome, and auspicious red-gold "শুভ বিবাহ" in the sky.
   2. Floating regal gold **Royal Shehnai** music controller at the top right with an animated 4-bar sound equalizer.
-  3. **Smart iOS WhatsApp Tip Banner**: Auto-detects if viewed on an iPhone inside WhatsApp and gently slides down a frosted gold guidance tip (*"Viewing in WhatsApp? Tap ⋯ (top right) → 'Open in Browser' for full screen & sound"*), self-dismissing after 9.5 seconds. Ignored on Android/desktop where it runs natively.
-  4. Elegant, glowing **OPEN INVITATION** gold button at the bottom of the screen with a gentle breathing pulse.
-  5. Tapping **OPEN INVITATION** initiates a **Gentle Cinematic Fade & Particle Drift**:
+  3. Elegant, glowing **OPEN INVITATION** gold button at the bottom of the screen with a gentle breathing pulse.
+  4. Tapping **OPEN INVITATION** initiates a **Gentle Cinematic Fade & Particle Drift**:
      - The background scenery gains a dreamy **cinematic depth-of-field soft blur** and warm golden backlight aura.
      - A radiant **Golden Sparkle Wash** (cascading golden stars, glowing embers, and champagne dust) showers downwards across the screen.
      - The **Royal Golden Scroll (রাজকীয় ফরম্মান)** smoothly unrolls downwards with soft optical blur-to-sharp crossfade, accompanied by swaying golden silk tassels.

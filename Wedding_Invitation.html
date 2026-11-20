@@ -982,121 +982,7 @@
     }
 
   
-    /* ==========================================================================
-       SMART IOS WHATSAPP BROWSER TIP BANNER
-       ========================================================================== */
-    .ios-whatsapp-banner {
-      position: fixed;
-      top: 14px;
-      left: 50%;
-      transform: translateX(-50%) translateY(-100px);
-      width: calc(100% - 24px);
-      max-width: 440px;
-      z-index: 10002;
-      background: rgba(34, 10, 10, 0.94);
-      border: 1.5px solid rgba(212, 175, 55, 0.85);
-      border-radius: 14px;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), 0 0 18px rgba(212, 175, 55, 0.35);
-      padding: 10px 14px;
-      box-sizing: border-box;
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
-    }
-
-    .ios-whatsapp-banner.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .ios-whatsapp-banner.hide {
-      transform: translateX(-50%) translateY(-100px);
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .ios-banner-content {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      position: relative;
-    }
-
-    .ios-banner-icon {
-      font-size: 1.25rem;
-      line-height: 1;
-      flex-shrink: 0;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-    }
-
-    .ios-banner-text {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      text-align: left;
-    }
-
-    .ios-banner-title {
-      font-family: 'Cinzel', serif;
-      font-size: 0.74rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #ffd700;
-      font-weight: 700;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-    }
-
-    .ios-banner-desc {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 0.88rem;
-      line-height: 1.25;
-      color: #fcedcf;
-      letter-spacing: 0.02em;
-    }
-
-    .ios-banner-desc strong {
-      color: #fff4d1;
-      font-weight: 700;
-      text-shadow: 0 0 8px rgba(249, 217, 118, 0.5);
-    }
-
-    .ios-banner-arrow {
-      font-size: 1.15rem;
-      color: #ffd700;
-      font-weight: bold;
-      animation: pulseArrow 1.5s infinite alternate;
-      flex-shrink: 0;
-    }
-
-    @keyframes pulseArrow {
-      0% { transform: translate(0, 0); opacity: 0.7; }
-      100% { transform: translate(3px, -3px); opacity: 1; }
-    }
-
-    .ios-banner-close {
-      background: none;
-      border: none;
-      color: #d1b894;
-      font-size: 0.95rem;
-      padding: 4px 6px;
-      cursor: pointer;
-      line-height: 1;
-      border-radius: 4px;
-      transition: color 0.2s, background 0.2s;
-      flex-shrink: 0;
-    }
-
-    .ios-banner-close:hover,
-    .ios-banner-close:active {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-  </style>
+    </style>
 </head>
 <body>
 
@@ -1299,19 +1185,6 @@
   </div>
 
   
-  <!-- Smart iOS WhatsApp Browser Tip Banner -->
-  <aside class="ios-whatsapp-banner" id="iosWhatsappBanner" role="status" aria-live="polite" style="display: none;">
-    <div class="ios-banner-content">
-      <div class="ios-banner-icon" aria-hidden="true">📱</div>
-      <div class="ios-banner-text">
-        <span class="ios-banner-title">Viewing in WhatsApp?</span>
-        <span class="ios-banner-desc">Tap <strong>⋯</strong> (top right) → <strong>'Open in Browser'</strong> for full screen &amp; sound</span>
-      </div>
-      <div class="ios-banner-arrow" aria-hidden="true">↗</div>
-      <button class="ios-banner-close" id="iosBannerClose" aria-label="Dismiss tip">✕</button>
-    </div>
-  </aside>
-
   <!-- Toast Notification -->
   <div class="toast" id="toastNotification" role="alert" aria-live="polite"></div>
 
@@ -1763,62 +1636,6 @@ END:VCALENDAR`;
       });
 
       
-      /* ====================================================================
-         SMART IOS WHATSAPP IN-APP BROWSER DETECTOR & BANNER
-         ==================================================================== */
-      function initIosWhatsappDetection() {
-        try {
-          const ua = navigator.userAgent || navigator.vendor || window.opera || '';
-          
-          // Strictly check for iOS devices (iPhone, iPad, iPod)
-          const isIOS = /iPhone|iPad|iPod/i.test(ua) || 
-                        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-          
-          // Strictly check if running inside WhatsApp on iOS (Android runs perfectly)
-          const isWhatsApp = /WhatsApp/i.test(ua);
-          const isIosWebview = isIOS && (isWhatsApp || (!window.safari && !/CriOS|FxiOS|EdgiOS/.test(ua) && !window.navigator.standalone));
-
-          // Exit immediately if NOT on iOS or NOT in WhatsApp / webview
-          if (!isIOS || (!isWhatsApp && !isIosWebview)) return;
-
-          const banner = document.getElementById('iosWhatsappBanner');
-          const closeBtn = document.getElementById('iosBannerClose');
-          if (!banner) return;
-
-          // Display element and smoothly slide down after brief delay
-          banner.style.display = 'block';
-          setTimeout(() => {
-            banner.classList.add('show');
-          }, 850);
-
-          // Self-dismiss automatically after 9.5 seconds
-          let dismissTimer = setTimeout(() => {
-            dismissBanner();
-          }, 9500);
-
-          function dismissBanner() {
-            clearTimeout(dismissTimer);
-            banner.classList.remove('show');
-            banner.classList.add('hide');
-            setTimeout(() => {
-              banner.style.display = 'none';
-            }, 550);
-          }
-
-          if (closeBtn) {
-            closeBtn.addEventListener('click', (e) => {
-              e.stopPropagation();
-              dismissBanner();
-            });
-          }
-        } catch (err) {
-          console.warn('iOS WhatsApp banner init exception:', err);
-        }
-      }
-
-      // Initialize iOS WhatsApp detection & guidance
-      initIosWhatsappDetection();
-
       // Initialize cinematic particle drift & engine
       initParticles();
 
