@@ -714,6 +714,7 @@
       color: #ffffff;
       border: 1px solid #14522c;
       box-shadow: 0 3px 8px rgba(27, 104, 56, 0.35);
+      padding: 6px 8px;
     }
 
     .btn-action-rsvp:hover {
@@ -722,8 +723,119 @@
       box-shadow: 0 4px 12px rgba(27, 104, 56, 0.45);
     }
 
-    .btn-action-calendar {
+    .rsvp-btn-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.15;
+    }
+
+    .rsvp-btn-title {
+      font-size: 0.70rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+
+    .rsvp-btn-num {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      opacity: 0.92;
+      margin-top: 1px;
+    }
+
+    .btn-action-rsvp-both {
       grid-column: span 2;
+      background: linear-gradient(135deg, #1b6838 0%, #0d4a24 100%);
+      color: #ffffff;
+      border: 1px solid #d4af37;
+      box-shadow: 0 3px 10px rgba(27, 104, 56, 0.35), 0 0 10px rgba(212, 175, 55, 0.25);
+      font-size: 0.74rem;
+      letter-spacing: 1.2px;
+      min-height: 44px;
+      position: relative;
+    }
+
+    .btn-action-rsvp-both:hover {
+      background: linear-gradient(135deg, #15552d 0%, #0a3a1c 100%);
+      border-color: #f7e7a9;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(27, 104, 56, 0.45), 0 0 14px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-action-rsvp-both.step-waiting-second {
+      background: linear-gradient(135deg, #b8860b 0%, #800e22 100%);
+      border-color: #ffd700;
+      animation: pulseRsvp 1.5s infinite;
+    }
+
+    @keyframes pulseRsvp {
+      0%, 100% { box-shadow: 0 0 8px rgba(255, 215, 0, 0.5); }
+      50% { box-shadow: 0 0 16px rgba(255, 215, 0, 0.9); }
+    }
+
+    /* Event Details RSVP Section */
+    .rsvp-details-item {
+      padding-top: 8px;
+      text-align: center;
+    }
+
+    .rsvp-details-label {
+      font-family: var(--font-royal);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 4px;
+    }
+
+    .rsvp-details-numbers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-family: var(--font-royal);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--burgundy-rich);
+    }
+
+    .rsvp-pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      background: rgba(27, 104, 56, 0.08);
+      border: 1px solid rgba(27, 104, 56, 0.28);
+      border-radius: 12px;
+      color: #1b6838;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .rsvp-pill-link:hover {
+      background: #1b6838;
+      color: #ffffff;
+      border-color: #1b6838;
+      transform: translateY(-1px);
+    }
+
+    .rsvp-mini-wa {
+      width: 13px;
+      height: 13px;
+      fill: currentColor;
+    }
+
+    .rsvp-pill-sep {
+      color: var(--gold-primary);
+      font-size: 0.8rem;
+    }
+
+    .btn-action-calendar {
       background: #ffffff;
       color: var(--ink-charcoal);
       border: 1px solid rgba(158, 125, 35, 0.4);
@@ -1152,6 +1264,23 @@
                 97, Keshab Chandra Sen Street, near City College,<br>College Street Area, Kolkata - 700009
               </div>
             </div>
+            <div class="venue-divider"></div>
+            <div class="detail-item rsvp-details-item">
+              <div class="rsvp-details-label">RSVP on WhatsApp</div>
+              <div class="rsvp-details-numbers">
+                <a href="https://api.whatsapp.com/send?phone=919874839969&amp;text=Dear%20Puja%20%26%20Dipayan%2C%20thank%20you%20for%20the%20wedding%20invitation%21%20Excited%20to%20join%20your%20celebration%21" 
+                   class="rsvp-pill-link" target="_blank" rel="noopener noreferrer">
+                  <svg class="rsvp-mini-wa" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+                  <span>+91 98748 39969</span>
+                </a>
+                <span class="rsvp-pill-sep">&bull;</span>
+                <a href="https://api.whatsapp.com/send?phone=916290837737&amp;text=Dear%20Puja%20%26%20Dipayan%2C%20thank%20you%20for%20the%20wedding%20invitation%21%20Excited%20to%20join%20your%20celebration%21" 
+                   class="rsvp-pill-link" target="_blank" rel="noopener noreferrer">
+                  <svg class="rsvp-mini-wa" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+                  <span>+91 62908 37737</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           <!-- Action Buttons -->
@@ -1165,18 +1294,41 @@
               <span>View Venue</span>
             </a>
 
-            <a href="https://api.whatsapp.com/send?phone=919874839969&amp;text=Dear%20Puja%20%26%20Dipayan%2C%20thank%20you%20for%20the%20wedding%20invitation%21" 
-               class="btn-action btn-action-rsvp" 
-               id="btnWhatsappRsvp" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
-              <span>RSVP WhatsApp</span>
-            </a>
-
             <button class="btn-action btn-action-calendar" id="btnSaveDate">
               <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
               <span>Save Date (.ICS)</span>
+            </button>
+
+            <!-- WhatsApp RSVP Cell 1 -->
+            <a href="https://api.whatsapp.com/send?phone=919874839969&amp;text=Dear%20Puja%20%26%20Dipayan%2C%20thank%20you%20for%20the%20wedding%20invitation%21%20Excited%20to%20join%20your%20celebration%21" 
+               class="btn-action btn-action-rsvp" 
+               id="btnWhatsappRsvp1" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+              <span class="rsvp-btn-text">
+                <span class="rsvp-btn-title">RSVP Cell 1</span>
+                <span class="rsvp-btn-num">+91 98748 39969</span>
+              </span>
+            </a>
+
+            <!-- WhatsApp RSVP Cell 2 -->
+            <a href="https://api.whatsapp.com/send?phone=916290837737&amp;text=Dear%20Puja%20%26%20Dipayan%2C%20thank%20you%20for%20the%20wedding%20invitation%21%20Excited%20to%20join%20your%20celebration%21" 
+               class="btn-action btn-action-rsvp" 
+               id="btnWhatsappRsvp2" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+              <span class="rsvp-btn-text">
+                <span class="rsvp-btn-title">RSVP Cell 2</span>
+                <span class="rsvp-btn-num">+91 62908 37737</span>
+              </span>
+            </a>
+
+            <!-- RSVP to Both Numbers (Full Width Guided Flow) -->
+            <button class="btn-action btn-action-rsvp-both" id="btnWhatsappRsvpBoth">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+              <span id="btnRsvpBothText">✨ Send RSVP to Both Numbers</span>
             </button>
 
             <!-- Roll Up Action Button -->
@@ -1238,6 +1390,12 @@
         venue: "Lalita Banquet & Guest House",
         address: "97, Keshab Chandra Sen Street, near City College, College Street Area, Kolkata - 700009",
         rsvpNumber: "919874839969",
+        rsvpNumber2: "916290837737",
+        rsvpNumbers: [
+          { label: "Cell 1", number: "919874839969", display: "+91 98748 39969" },
+          { label: "Cell 2", number: "916290837737", display: "+91 62908 37737" }
+        ],
+        rsvpMessage: "Dear Puja & Dipayan, thank you for the wedding invitation! Excited to join your celebration!",
         mapQuery: "Lalita Banquet & Guest House, 97, Keshab Chandra Sen Street, Kolkata 700009",
         calendarEvent: {
           title: "Wedding of Puja Deb & Dipayan Bhowal",
@@ -1666,6 +1824,50 @@ END:VCALENDAR`;
         setTimeout(() => {
           toastNotification.classList.remove('show');
         }, 3200);
+      }
+
+      /* RSVP to Both WhatsApp Numbers - 2-Step Guided Safe Navigation */
+      const btnWhatsappRsvpBoth = document.getElementById('btnWhatsappRsvpBoth');
+      const btnRsvpBothText = document.getElementById('btnRsvpBothText');
+      let rsvpBothStep = 0;
+      let rsvpResetTimer = null;
+
+      function handleRsvpBoth() {
+        const encodedMsg = encodeURIComponent(WEDDING_DATA.rsvpMessage || "Dear Puja & Dipayan, thank you for the wedding invitation! Excited to join your celebration!");
+        const url1 = `https://api.whatsapp.com/send?phone=${WEDDING_DATA.rsvpNumber}&text=${encodedMsg}`;
+        const url2 = `https://api.whatsapp.com/send?phone=${WEDDING_DATA.rsvpNumber2}&text=${encodedMsg}`;
+
+        if (rsvpBothStep === 0) {
+          // Step 1: Open First Cell
+          window.open(url1, '_blank', 'noopener,noreferrer');
+          rsvpBothStep = 1;
+          if (btnWhatsappRsvpBoth) btnWhatsappRsvpBoth.classList.add('step-waiting-second');
+          if (btnRsvpBothText) btnRsvpBothText.innerHTML = `👉 Tap to Send to 2nd Cell (+91 62908 37737)`;
+          showToast('Cell 1 opened! Tap the button again to send to Cell 2.');
+
+          clearTimeout(rsvpResetTimer);
+          rsvpResetTimer = setTimeout(() => {
+            rsvpBothStep = 0;
+            if (btnWhatsappRsvpBoth) btnWhatsappRsvpBoth.classList.remove('step-waiting-second');
+            if (btnRsvpBothText) btnRsvpBothText.textContent = '✨ Send RSVP to Both Numbers';
+          }, 30000);
+        } else {
+          // Step 2: Open Second Cell
+          window.open(url2, '_blank', 'noopener,noreferrer');
+          rsvpBothStep = 0;
+          clearTimeout(rsvpResetTimer);
+          if (btnWhatsappRsvpBoth) btnWhatsappRsvpBoth.classList.remove('step-waiting-second');
+          if (btnRsvpBothText) btnRsvpBothText.textContent = '✓ RSVP Sent to Both Numbers!';
+          showToast('RSVP sent to both WhatsApp numbers!');
+
+          setTimeout(() => {
+            if (btnRsvpBothText) btnRsvpBothText.textContent = '✨ Send RSVP to Both Numbers';
+          }, 4000);
+        }
+      }
+
+      if (btnWhatsappRsvpBoth) {
+        btnWhatsappRsvpBoth.addEventListener('click', handleRsvpBoth);
       }
 
       /* Event Listeners */
