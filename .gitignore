@@ -1,0 +1,4 @@
+# Node & temp files
+node_modules/
+*.log
+Audio_Test.html
