@@ -723,44 +723,10 @@
     }
 
     .btn-action-calendar {
-      grid-column: span 2;
       background: #ffffff;
       color: var(--ink-charcoal);
       border: 1px solid rgba(158, 125, 35, 0.4);
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-    }
-
-    /* Event Details RSVP Section */
-    .rsvp-details-item {
-      padding-top: 8px;
-      text-align: center;
-    }
-
-    .rsvp-details-label {
-      font-family: var(--font-royal);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      margin-bottom: 4px;
-    }
-
-    .rsvp-details-numbers {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-family: var(--font-royal);
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--burgundy-rich);
-    }
-
-    .rsvp-pill-sep {
-      color: var(--gold-primary);
-      font-size: 0.8rem;
     }
 
     .btn-action-calendar:hover {
@@ -1185,19 +1151,31 @@
                 97, Keshab Chandra Sen Street, near City College,<br>College Street Area, Kolkata - 700009
               </div>
             </div>
-            <div class="venue-divider"></div>
-            <div class="detail-item rsvp-details-item">
-              <div class="rsvp-details-label">RSVP on WhatsApp</div>
-              <div class="rsvp-details-numbers">
-                <span>+91 98748 39969</span>
-                <span class="rsvp-pill-sep">&bull;</span>
-                <span>+91 62908 37737</span>
-              </div>
-            </div>
           </div>
 
           <!-- Action Buttons -->
           <div class="card-actions-grid">
+            <!-- Groom RSVP Button -->
+            <a href="https://api.whatsapp.com/send?phone=919874839969&amp;text=Dear%20Dipayan%2C%20thank%20you%20for%20the%20wedding%20invitation%21%20Excited%20to%20join%20your%20celebration%21" 
+               class="btn-action btn-action-rsvp" 
+               id="btnGroomRsvp" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+              <span>Groom RSVP</span>
+            </a>
+
+            <!-- Bride RSVP Button -->
+            <a href="https://api.whatsapp.com/send?phone=916290837737&amp;text=Dear%20Puja%2C%20thank%20you%20for%20the%20wedding%20invitation%21%20Excited%20to%20join%20your%20celebration%21" 
+               class="btn-action btn-action-rsvp" 
+               id="btnBrideRsvp" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+              <span>Bride RSVP</span>
+            </a>
+
+            <!-- View Venue Button -->
             <a href="https://www.google.com/maps/search/?api=1&amp;query=Lalita%20Banquet%20%26%20Guest%20House%2C%2097%2C%20Keshab%20Chandra%20Sen%20Street%2C%20Kolkata%20700009" 
                class="btn-action btn-action-venue" 
                id="btnVenueMap" 
@@ -1207,16 +1185,7 @@
               <span>View Venue</span>
             </a>
 
-            <!-- Single-Click RSVP WhatsApp (Directly sends to both +91 98748 39969 & +91 62908 37737) -->
-            <a href="https://api.whatsapp.com/send?phone=919874839969&amp;text=Dear%20Puja%20%26%20Dipayan%2C%20thank%20you%20for%20the%20wedding%20invitation%21%20Excited%20to%20join%20your%20celebration%21" 
-               class="btn-action btn-action-rsvp" 
-               id="btnWhatsappRsvp" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
-              <span id="rsvpBtnText">RSVP WhatsApp</span>
-            </a>
-
+            <!-- Save Date Button -->
             <button class="btn-action btn-action-calendar" id="btnSaveDate">
               <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
               <span>Save Date (.ICS)</span>
@@ -1280,12 +1249,8 @@
         timeDisplay: "7:00 PM Onwards",
         venue: "Lalita Banquet & Guest House",
         address: "97, Keshab Chandra Sen Street, near City College, College Street Area, Kolkata - 700009",
-        rsvpNumber: "919874839969",
-        rsvpNumber2: "916290837737",
-        rsvpNumbers: [
-          { label: "Cell 1", number: "919874839969", display: "+91 98748 39969" },
-          { label: "Cell 2", number: "916290837737", display: "+91 62908 37737" }
-        ],
+        groomRsvp: "919874839969",
+        brideRsvp: "916290837737",
         rsvpMessage: "Dear Puja & Dipayan, thank you for the wedding invitation! Excited to join your celebration!",
         mapQuery: "Lalita Banquet & Guest House, 97, Keshab Chandra Sen Street, Kolkata 700009",
         calendarEvent: {
@@ -1717,58 +1682,21 @@ END:VCALENDAR`;
         }, 3200);
       }
 
-      /* Single-Click RSVP to Both WhatsApp Numbers (+91 98748 39969 & +91 62908 37737) */
-      const btnWhatsappRsvp = document.getElementById('btnWhatsappRsvp');
-      const rsvpBtnText = document.getElementById('rsvpBtnText');
-      let pendingSecondRsvpUrl = null;
+      /* Groom & Bride WhatsApp RSVP Handlers (No phone numbers exposed) */
+      const btnGroomRsvp = document.getElementById('btnGroomRsvp');
+      const btnBrideRsvp = document.getElementById('btnBrideRsvp');
 
-      function handleSingleClickRsvp(e) {
-        const encodedMsg = encodeURIComponent(WEDDING_DATA.rsvpMessage || "Dear Puja & Dipayan, thank you for the wedding invitation! Excited to join your celebration!");
-        const url2 = `https://api.whatsapp.com/send?phone=${WEDDING_DATA.rsvpNumber2}&text=${encodedMsg}`;
-
-        // Arm the second WhatsApp link
-        pendingSecondRsvpUrl = url2;
-
-        // On desktop/multi-tab environments, launch 2nd number immediately in new tab
-        setTimeout(() => {
-          try {
-            const w2 = window.open(url2, '_blank', 'noopener,noreferrer');
-            if (w2 && !w2.closed && typeof w2.closed !== 'undefined') {
-              pendingSecondRsvpUrl = null;
-            }
-          } catch (err) {}
-        }, 200);
-
-        showToast('RSVP to both numbers (+91 98748 39969 & +91 62908 37737) initiated!');
+      if (btnGroomRsvp) {
+        btnGroomRsvp.addEventListener('click', function() {
+          showToast('Opening WhatsApp to RSVP Groom (Dipayan)...');
+        });
       }
 
-      if (btnWhatsappRsvp) {
-        btnWhatsappRsvp.addEventListener('click', handleSingleClickRsvp);
+      if (btnBrideRsvp) {
+        btnBrideRsvp.addEventListener('click', function() {
+          showToast('Opening WhatsApp to RSVP Bride (Puja)...');
+        });
       }
-
-      // Automatically launch 2nd WhatsApp chat when user switches back to browser tab
-      function triggerPendingSecondRsvp() {
-        if (pendingSecondRsvpUrl) {
-          const nextUrl = pendingSecondRsvpUrl;
-          pendingSecondRsvpUrl = null;
-          try {
-            const w = window.open(nextUrl, '_blank', 'noopener,noreferrer');
-            if (!w || w.closed || typeof w.closed === 'undefined') {
-              window.location.href = nextUrl;
-            }
-          } catch (e) {
-            window.location.href = nextUrl;
-          }
-          showToast('Opening 2nd WhatsApp (+91 62908 37737)...');
-        }
-      }
-
-      window.addEventListener('focus', triggerPendingSecondRsvp);
-      document.addEventListener('visibilitychange', function() {
-        if (!document.hidden) {
-          triggerPendingSecondRsvp();
-        }
-      });
 
       /* Event Listeners */
       openBtn.addEventListener('click', unrollScroll);
