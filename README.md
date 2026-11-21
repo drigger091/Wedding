@@ -21,7 +21,7 @@ An interactive, self-contained HTML wedding invitation crafted for **Puja Deb & 
      - The **Royal Golden Scroll (রাজকীয় ফরম্মান)** smoothly unrolls downwards with soft optical blur-to-sharp crossfade, accompanied by swaying golden silk tassels.
      - Auspicious **Royal Shehnai Instrumental Melody** (Raga Kedar Dhun by Ustad Bismillah Khan) automatically fades in smoothly, setting an enchanting celebratory ambiance.
   5. At the top of the unrolled parchment is an ornate, sacred circular medallion of **Lord Ganesha (শ্রী গণেশ)** with `॥ ॐ শ্রী গণেশায় নমঃ ॥` and `॥ শুভ বিবাহ ॥`.
-  6. Interactive buttons on the scroll allow guests to RSVP instantly on WhatsApp (`9874839969`), view the Google Maps venue location in a new tab, and save the wedding date directly to their calendar (.ics).
+  6. Interactive buttons on the scroll allow guests to view the Google Maps venue location in a new tab and save the wedding date directly to their calendar (.ics).
   7. Smooth **Roll Up** navigation gently restores background focus and brings back the opening invitation button with the welcoming couple still in their folded-hand greeting, while music continues or can be paused at will.
 
 ---
@@ -65,7 +65,6 @@ Wedding_card/
 | **Venue** | Lalita Banquet & Guest House |
 | **Address** | 97, Keshab Chandra Sen Street, near City College, College Street Area, Kolkata - 700009 |
 | **Google Maps Pin** | [Open in Google Maps](https://maps.google.com/?q=Lalita+Banquet+%26+Guest+House+97+Keshab+Chandra+Sen+Street+Kolkata+700009) |
-| **WhatsApp RSVP** | `+91 9874839969` |
 | **Save The Date** | Generates & downloads `Puja_and_Dipayan_Wedding.ics` calendar file |
 | **Back Button** | Integrated top and bottom "Back to Envelope" navigation inside the card |
 
